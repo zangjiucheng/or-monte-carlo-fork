@@ -38,6 +38,9 @@ jobs:
       - name: Prepare Gradle
         uses: gradle/actions/setup-gradle@v4
 
+      - name: Build OpenRocketAdd commentMore actions
+        run: ./gradlew buildOpenRocket
+
       - name: Build & create fat-JAR
         run: ./gradlew --no-daemon clean shadowJar
 
