@@ -58,8 +58,7 @@ jobs:
       contents: write           # required for tag & release
 
     # Run automatically on master pushes, or when manually triggered
-    if: >
-      (github.event_name == 'workflow_dispatch' && inputs.publish_release == 'true')
+    if: github.event_name == 'workflow_dispatch' && inputs.publish_release == true
 
     steps:
       - name: Download JAR artifact
