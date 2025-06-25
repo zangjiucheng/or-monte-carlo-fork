@@ -16,7 +16,7 @@ concurrency:
 jobs:
   release:
     # Run only when the caller asks for a release
-    if: inputs.publish_release == 'true'
+    if: inputs.publish_release == true
     runs-on: ubuntu-latest
     permissions:
       contents: write       # needed for tag & release
