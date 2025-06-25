@@ -39,6 +39,7 @@ jobs:
 
       - name: Build OpenRocket
         run: ./gradlew buildOpenRocket
+             ./gradlew buildExtensions
 
       - name: Build fat-JAR
         run: ./gradlew --no-daemon clean shadowJar
